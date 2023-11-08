@@ -871,13 +871,15 @@ class Base:
             return -1
 
     def xuan_ze_wujiang(self, partStr):
-        a = base.driver.find_element(By.XPATH, "//select[@id='generalid']")
+        a = self.driver.find_element(By.XPATH, "//select[@name='generalid']")
         select = Select(a)
         options = select.options
         for option in options:
             if partStr in option.text:
                 option.click()
+                return 1
                 break
+
 
     # 练兵将
     def lian_bin_jiang(self):

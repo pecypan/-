@@ -8,6 +8,39 @@ stringFB = '&level=3&armyType=defend&side=song'
 removestr = 'master.php?t'
 tasklist = ['union/unionwarapply.php?t','tasks/fightThiefApply.php?t']
 
+def tiger_wujiang(base, city_listE):
+	for i in range(3):
+		urlE = base.driver.current_url
+		urlE_list = list(urlE)
+		urlE_list[len(urlE_list) - 1] = city_listE[i]
+		print(urlE_list)
+		urlE = ''.join(i for i in urlE_list)
+		base.driver.get(urlE)
+		delay(0.35)
+		base.click_word('任务')
+		base.click_word('打老虎')
+		textE = base.is_text_exit('报名第')
+		if textE == 1:
+			base.click_word('名武将')
+			a = base.xuan_ze_wujiang('_')
+			if a == 1:
+				base.click_button('报名')
+				base.click_word('首页')
+			else:
+				print('武将失踪了，请查找武将')
+				base.click_word('首页')
+		else:
+			break
+
+def beat_tiger(base, name):
+	if name == '汜轻尘':
+		city_listE = ['0', '4', '10']
+		tiger_wujiang(base, city_listE)
+	if name == '相见不如怀念√':
+		city_listE = ['0', '3', '4']
+		tiger_wujiang(base, city_listE)
+		
+
 
 
 def zheng_tao(url_list, number):
@@ -48,6 +81,10 @@ def zheng_tao(url_list, number):
 				base.click_button('报名')
 			except:
 				print('报了A')
+		base.click_word('首页')
+		name = base.get_maincity_name()
+		if name == '汜轻尘' or name == '相见不如怀念√':
+			beat_tiger(base, name)
 	base.driver.quit()
 
 
@@ -55,7 +92,7 @@ def zheng_tao(url_list, number):
 if __name__ == '__main__':
 	urlList = [
 		'http://sh27.caihonger.com/master.php?t=72005776136166818801&u='
-			'Vm1sY01sVTVCbUFHWjEwM0FUOVVNd0V5VURnSGJnPT0_c&k=17959&c=13',  				# 汜轻尘
+			'Vm1sY01sVTVCbUFHWjEwM0FUOVVNd0V5VURnSGJnPT0_c&k=17959&c=1',  				# 汜轻尘
 		'http://sh21.caihonger.com/master.php?t=8587&t=49298097774437635259&u='
 			'RHpBSVpsOHpWREphTzE0MFdtUUhZRkpoQW1vRWJBPT0_c&k=307721&c=0',				# 小天使25
 		'http://sh27.caihonger.com/master.php?t=11355471497717507354&u='

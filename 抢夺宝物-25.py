@@ -55,7 +55,6 @@ if __name__ == '__main__':
     'http://sh21.caihonger.com/master.php?t=5680&t=49298097774437635259&u=RHpBSVpsOHpWREphTzE0MFdtUUhZRkpoQW1vRWJBPT0_c&k=307721&c=0',# 4-日向小天使 25
     'http://sh21.caihonger.com/master.php?t=8611&t=95133861564797375083&u=QjNBTVAxRThCMlpRTlFGdEREUlFNUUEwQlcwPQ_c_c&k=290406&c=0',# 5-玫瑰赠于你 25
     'http://sh21.caihonger.com/master.php?t=8991&t=30464090271541595146&u=QWtnQUgxWkZEbTRHWkFGb0FEMVJPZ0V4QkdaUU9RODFBRFpkYkE9PQ_c_c&k=291519&c=0', # 12-唉唉唉唉唉唉 25
-    'http://sh11.caihonger.com/master.php?t=9997&t=14546987918182637030&u=QnpzTVp3TnRWRHhTTlZ3d0R6WlZOZ2hH&k=98723&c=0',# 11-天选
            ]
  
     qiang_duo_bao_wu(urlList)

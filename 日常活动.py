@@ -39,6 +39,9 @@ def beat_tiger(base, name):
 	if name == '相见不如怀念√':
 		city_listE = ['0', '3', '4']
 		tiger_wujiang(base, city_listE)
+	if name == '夏未尽♀花己落':
+		city_listE = ['0', '4', '6']
+		tiger_wujiang(base, city_listE)
 		
 
 
@@ -83,7 +86,7 @@ def zheng_tao(url_list, number):
 				print('报了A')
 		base.click_word('首页')
 		name = base.get_maincity_name()
-		if name == '汜轻尘' or name == '相见不如怀念√':
+		if name == '汜轻尘' or name == '相见不如怀念√' or name == '夏未尽♀花己落':
 			beat_tiger(base, name)
 	base.driver.quit()
 

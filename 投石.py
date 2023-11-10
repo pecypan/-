@@ -22,10 +22,10 @@ def tou_shi(url_, main_city_name, city_name_list, location):
         # gui_mo = base.city_gui_mo()
         # if gui_mo != 0:
         base.click_word('出兵')
-        try:
-            base.click_button('全', '连环马', '800')
-        except:
-            logger.info('1 | 1')
+        # try:
+        #     base.click_button('全', '连环马', '800')
+        # except:
+        #     logger.info('1 | 1')
         try:
             base.click_button('全', '轰天雷', '2000')
         except:
@@ -62,10 +62,10 @@ def tou_shi(url_, main_city_name, city_name_list, location):
                 base.click_button('全', '轰天雷', '2000')
             except:
                 logger.info(f'{x} | 1')
-            try:
-                base.click_button('全', '连环马', '800')
-            except:
-                logger.info(f'{x} | 2')
+            # try:
+            #     base.click_button('全', '连环马', '800')
+            # except:
+            #     logger.info(f'{x} | 2')
             try:
                 base.click_button('全', '游骑兵', '400')
             except:
@@ -87,8 +87,8 @@ def tou_shi(url_, main_city_name, city_name_list, location):
 
 
 if __name__ == '__main__':
-    url = 'http://sh27.caihonger.com/master.php?t=13437594576846656625&u=QUQ4QmJ3SnVVVGRWTkE1a0NqUUhZQUV5Qm00Q2F3PT0_c&k=18210&c=3'
-    location = ['&x=45805&y=3']
+    url = 'https://sh27.caihonger.com/master.php?t=2569&t=72005776136166818801&u=Vm1sY01sVTVCbUFHWjEwM0FUOVVNd0V5VURnSGJnPT0_c&k=18210&c=0'
+    location = ['&x=45141&y=4']
     mainCity = '岂可'
     cityName = ['④','⑤','⑥','⑦','⑧','⑨','⑩','①①','①②','①③']
 

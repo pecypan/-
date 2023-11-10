@@ -47,6 +47,7 @@ def zhao_bin(urlList):
 
 def qian_dao(url_list):
 	base = Base()
+	base.config(1)
 	for index in range(0, len(url_list)):
 		logger.info(f'----------{index + 1}----------')
 		base.driver.get(url_list[index])
@@ -55,12 +56,23 @@ def qian_dao(url_list):
 		city_list = base.locate_a('all')
 		for city in city_list:
 			base.click_word(city)
-			base.click_word('任务')
-			base.click_word('领取日')
-			base.click_word('任务')
-			base.click_word('抽奖')
-			base.driver.back()
-			base.driver.back()
+			# base.click_word('任务')
+			# base.click_word('领取日')
+			# base.click_word('任务')
+			# base.click_word('抽奖')
+			# base.driver.back()
+			# base.driver.back()
+			# base.driver.back()
+			# base.driver.back()
+			# base.driver.back()
+			base.click_word('状态')
+			try:
+				base.click_word('屏蔽播报', 1)
+			except:
+				base.click_word('首页')
+				base.click_word('系统')
+				base.click_word('切换')
+				continue
 			base.driver.back()
 			base.driver.back()
 			base.driver.back()
@@ -75,6 +87,6 @@ if __name__ == '__main__':
 		a = f.readlines()
 		f.close()
 	print(len(a))
-	# qian_dao(a) #签到
-	zhao_bin(a) #招兵
+	qian_dao(a) #签到
+	# zhao_bin(a) #招兵
 	# kai_hui_yuan(a)

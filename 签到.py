@@ -71,8 +71,12 @@ def qian_dao(url_):
 
 if __name__ == '__main__':
     urlList = [
+        'http://sh27.caihonger.com/selectKings.php?u=VXljTU5GZHNVVEZiTlY0NUNqcFRNUWc4VmpWUk1BPT0_c&t'
+            '=32080335616043506375',    # 小猪
+        'http://sh27.caihonger.com/selectKings.php?u=QTJGYWJnY3VEanBVTWc1cEREMENhUWsrQ21sUU1nVTJWRFJYT1ZVMA_c_c&t'
+            '=27584735866379183154',    # 画颜卿
         'http://sh31.caihonger.com/selectKings.php?u=QTBrQkhsRkNBV0ZYTlFCcFdtZFRPRkppQkdZR2J3ODFVbVJUWWc9PQ_c_c&t'
-        '=30464090271541595146',        # 0-大郎
+            '=30464090271541595146',    # 0-大郎
         'http://sh27.caihonger.com/selectKings.php?c=0&u=QVZVQU0xVnpEMjlWTlY0MURqNERaVkprQTJaWE5GRmtBVElBT2djNg_c_c&t'
             '=85226957694941849938',    # 1-回归
         'http://sh27.caihonger.com/selectKings.php?c=0&u=VW1nS1pGRTlWVFpUUFFCcFhHUUZZQU0z&t=1644045681',

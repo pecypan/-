@@ -6,12 +6,12 @@ def kai_fen_hao(url, list_a, list_p):
 	base.driver.get(url)
 	delay()
     # 登录
-	for i in range(65, 100):
+	for i in range(8, 20):
 		logger.info(f'-----------------------------账号：{list_a[i]}__密码：{list_p[i]}--------------------------------')
 		base.input_acc_pass(list_a[i], list_p[i])
 		base.click_button('确定')
         # 选择区服
-		base.select_sh(8)
+		base.select_sh(6)
 		base.click_word('创建')
 		for i in range(0, 20):
 			base.yan_zhen()
@@ -33,7 +33,7 @@ def kai_fen_hao(url, list_a, list_p):
 def kai_fen(base):
 	x, y = base.location_mine()
 	base.click_word('地图')
-	base.location_x(x + 40)
+	base.location_x(x + 60)
 	links = base.driver.find_elements(By.XPATH, "//a[starts-with(@href,'mapgetonemap.php?')]")
 	i = 0
 	for link in links:
@@ -92,7 +92,7 @@ def kai_fen_zhai(url, list_a, list_p):
 	base.driver.get(url)
 	delay()
     # 登录
-	for i in range(99, 100):
+	for i in range(100, 110):
 		logger.info(f'-----------------------------账号：{list_a[i]}__密码：{list_p[i]}--------------------------------')
 		base.input_acc_pass(list_a[i], list_p[i])
 		base.click_button('确定')
@@ -108,11 +108,11 @@ def kai_fen_zhai(url, list_a, list_p):
 			# 	base.driver.back()
 			# 	continue
 			# base.click_word('首页')
-			# # num = base.city_number()
-			# # if num >= 2:
-			# # 	base.click_word('系统')
-			# # 	base.click_word('切换好汉')
-			# # 	continue
+			num = base.city_number()
+			if num >= 2:
+				base.click_word('系统')
+				base.click_word('切换好汉')
+				continue
 			# base.click_word('宝箱')
 			# base.click_word('资源')
 			# base.click_word('资源箱')
@@ -145,7 +145,7 @@ def kai_fen_zhai(url, list_a, list_p):
 			# # 		base.click_word('速建')
 			# # 		base.click_word('返回')
 			# # 	base.click_word('首页')
-			# # base.click_word('首页')
+			# base.click_word('首页')
 			# base.click_word('招兵')
 			# base.click_word('(建寨)工匠手')
 			# for j in range(10):

@@ -136,7 +136,7 @@ def fun3(base, city_list):
 
 
 def shen_zi_yuan(base_, city_names):
-    for i in range(0, 11):
+    for i in range(11, 22):
         current_url = base_.driver.current_url
         base_.click_word(city_names[i])
         mainurl = base_.driver.current_url
@@ -157,24 +157,24 @@ def kai_hui_yuan(base_, city_name_):
     current_url = base_.driver.current_url
     for i in range(11):
         base_.click_word(city_name_[i])
-        base_.click_word('状态')
-        base_.click_word('新手牌')
-        base_.click_word('单个使用')
+        # base_.click_word('状态')
+        # base_.click_word('新手牌')
+        # base_.click_word('单个使用')
         base_.driver.get(current_url)
 
 
 def zi_dong_deng_lu(url_, list_a, list_p):
     base = Base()
-    base.config(1)
+    base.config(0)
     base.driver.get(url_)
     delay()
     # 登录
-    for i in range(0, 100):
+    for i in range(39, 50):
         logger.info(f'账号：{list_a[i]}_______________________________________________________密码：{list_p[i]}')
         base.input_acc_pass(list_a[i], list_p[i])
         base.click_button('确定')
         # 选择区服
-        base.select_sh(5)
+        base.select_sh(4)
         city_list = base.locate_a('all')
         delay()
         shen_zi_yuan(base, city_list)
